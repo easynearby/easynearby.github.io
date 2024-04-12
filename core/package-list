@@ -1,0 +1,107 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:io.github.easynearby.core.advertising////PointingToDeclaration/core/io.github.easynearby.core.advertising/index.html
+$dokka.location:io.github.easynearby.core.advertising/AdvertiseManager///PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertise-manager/index.html
+$dokka.location:io.github.easynearby.core.advertising/AdvertiseManager/AdvertiseManager/#io.github.easynearby.core.PermissionsChecker#io.github.easynearby.core.advertising.Advertiser/PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertise-manager/-advertise-manager.html
+$dokka.location:io.github.easynearby.core.advertising/AdvertiseManager/startAdvertising/#io.github.easynearby.core.advertising.DeviceInfo/PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertise-manager/start-advertising.html
+$dokka.location:io.github.easynearby.core.advertising/AdvertiseManager/stopAdvertising/#/PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertise-manager/stop-advertising.html
+$dokka.location:io.github.easynearby.core.advertising/Advertiser///PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertiser/index.html
+$dokka.location:io.github.easynearby.core.advertising/Advertiser/startAdvertising/#io.github.easynearby.core.advertising.DeviceInfo/PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertiser/start-advertising.html
+$dokka.location:io.github.easynearby.core.advertising/Advertiser/stopAdvertising/#/PointingToDeclaration/core/io.github.easynearby.core.advertising/-advertiser/stop-advertising.html
+$dokka.location:io.github.easynearby.core.advertising/DeviceInfo///PointingToDeclaration/core/io.github.easynearby.core.advertising/-device-info/index.html
+$dokka.location:io.github.easynearby.core.advertising/DeviceInfo/DeviceInfo/#kotlin.String#kotlin.String#io.github.easynearby.core.ConnectionStrategy/PointingToDeclaration/core/io.github.easynearby.core.advertising/-device-info/-device-info.html
+$dokka.location:io.github.easynearby.core.advertising/DeviceInfo/name/#/PointingToDeclaration/core/io.github.easynearby.core.advertising/-device-info/name.html
+$dokka.location:io.github.easynearby.core.advertising/DeviceInfo/serviceId/#/PointingToDeclaration/core/io.github.easynearby.core.advertising/-device-info/service-id.html
+$dokka.location:io.github.easynearby.core.advertising/DeviceInfo/strategy/#/PointingToDeclaration/core/io.github.easynearby.core.advertising/-device-info/strategy.html
+$dokka.location:io.github.easynearby.core.connection////PointingToDeclaration/core/io.github.easynearby.core.connection/index.html
+$dokka.location:io.github.easynearby.core.connection/Connection///PointingToDeclaration/core/io.github.easynearby.core.connection/-connection/index.html
+$dokka.location:io.github.easynearby.core.connection/Connection/close/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection/close.html
+$dokka.location:io.github.easynearby.core.connection/Connection/getPayload/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection/get-payload.html
+$dokka.location:io.github.easynearby.core.connection/Connection/id/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection/id.html
+$dokka.location:io.github.easynearby.core.connection/Connection/name/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection/name.html
+$dokka.location:io.github.easynearby.core.connection/Connection/sendPayload/#kotlin.ByteArray/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection/send-payload.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidate///PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate/index.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidate/ConnectionCandidate/#kotlin.String#kotlin.String#kotlin.String?/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate/-connection-candidate.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidate/connect/#kotlin.String#kotlin.coroutines.SuspendFunction1[kotlin.String,kotlin.Boolean]/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate/connect.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidate/id/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate/id.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidate/isIncomingConnection/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate/is-incoming-connection.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidate/name/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate/name.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidateEvent///PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate-event/index.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidateEvent/ConnectionCandidateEvent/#io.github.easynearby.core.connection.ConnectionEventType#io.github.easynearby.core.connection.ConnectionCandidate/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate-event/-connection-candidate-event.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidateEvent/candidate/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate-event/candidate.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionCandidateEvent/type/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-candidate-event/type.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionEventType.DISCOVERED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}core/io.github.easynearby.core.connection/-connection-event-type/-d-i-s-c-o-v-e-r-e-d/index.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionEventType.LOST///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}core/io.github.easynearby.core.connection/-connection-event-type/-l-o-s-t/index.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionEventType///PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-event-type/index.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionEventType/entries/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-event-type/entries.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionEventType/valueOf/#kotlin.String/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-event-type/value-of.html
+$dokka.location:io.github.easynearby.core.connection/ConnectionEventType/values/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-connection-event-type/values.html
+$dokka.location:io.github.easynearby.core.connection/Connector///PointingToDeclaration/core/io.github.easynearby.core.connection/-connector/index.html
+$dokka.location:io.github.easynearby.core.connection/Connector/connect/#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.coroutines.SuspendFunction1[kotlin.String,kotlin.Boolean]/PointingToDeclaration/core/io.github.easynearby.core.connection/-connector/connect.html
+$dokka.location:io.github.easynearby.core.connection/Connector/disconnect/#kotlin.String/PointingToDeclaration/core/io.github.easynearby.core.connection/-connector/disconnect.html
+$dokka.location:io.github.easynearby.core.connection/Connector/rejectConnection/#kotlin.String/PointingToDeclaration/core/io.github.easynearby.core.connection/-connector/reject-connection.html
+$dokka.location:io.github.easynearby.core.connection/Connector/sendPayload/#kotlin.String#kotlin.ByteArray/PointingToDeclaration/core/io.github.easynearby.core.connection/-connector/send-payload.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection///PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/index.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/DirectConnection/#kotlin.String#kotlin.String#kotlinx.coroutines.flow.Flow[kotlin.ByteArray]/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/-direct-connection.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/close/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/close.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/equals/#kotlin.Any?/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/equals.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/getPayload/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/get-payload.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/hashCode/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/hash-code.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/id/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/id.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/name/#/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/name.html
+$dokka.location:io.github.easynearby.core.connection/DirectConnection/sendPayload/#kotlin.ByteArray/PointingToDeclaration/core/io.github.easynearby.core.connection/-direct-connection/send-payload.html
+$dokka.location:io.github.easynearby.core.di////PointingToDeclaration/core/io.github.easynearby.core.di/index.html
+$dokka.location:io.github.easynearby.core.di//baseModule/#/PointingToDeclaration/core/io.github.easynearby.core.di/base-module.html
+$dokka.location:io.github.easynearby.core.discovery////PointingToDeclaration/core/io.github.easynearby.core.discovery/index.html
+$dokka.location:io.github.easynearby.core.discovery/Discover///PointingToDeclaration/core/io.github.easynearby.core.discovery/-discover/index.html
+$dokka.location:io.github.easynearby.core.discovery/Discover/startDiscovery/#io.github.easynearby.core.advertising.DeviceInfo/PointingToDeclaration/core/io.github.easynearby.core.discovery/-discover/start-discovery.html
+$dokka.location:io.github.easynearby.core.discovery/Discover/stopDiscovery/#/PointingToDeclaration/core/io.github.easynearby.core.discovery/-discover/stop-discovery.html
+$dokka.location:io.github.easynearby.core.discovery/DiscoveryManager///PointingToDeclaration/core/io.github.easynearby.core.discovery/-discovery-manager/index.html
+$dokka.location:io.github.easynearby.core.discovery/DiscoveryManager/DiscoveryManager/#io.github.easynearby.core.PermissionsChecker#io.github.easynearby.core.discovery.Discover/PointingToDeclaration/core/io.github.easynearby.core.discovery/-discovery-manager/-discovery-manager.html
+$dokka.location:io.github.easynearby.core.discovery/DiscoveryManager/startDiscovery/#io.github.easynearby.core.advertising.DeviceInfo/PointingToDeclaration/core/io.github.easynearby.core.discovery/-discovery-manager/start-discovery.html
+$dokka.location:io.github.easynearby.core.discovery/DiscoveryManager/stopDiscovery/#/PointingToDeclaration/core/io.github.easynearby.core.discovery/-discovery-manager/stop-discovery.html
+$dokka.location:io.github.easynearby.core.exceptions////PointingToDeclaration/core/io.github.easynearby.core.exceptions/index.html
+$dokka.location:io.github.easynearby.core.exceptions/EasyNearbyNotInitializedException///PointingToDeclaration/core/io.github.easynearby.core.exceptions/-easy-nearby-not-initialized-exception/index.html
+$dokka.location:io.github.easynearby.core.exceptions/EasyNearbyNotInitializedException/EasyNearbyNotInitializedException/#kotlin.String?#kotlin.Throwable?/PointingToDeclaration/core/io.github.easynearby.core.exceptions/-easy-nearby-not-initialized-exception/-easy-nearby-not-initialized-exception.html
+$dokka.location:io.github.easynearby.core.exceptions/EasyNearbyNotInitializedException/cause/#/PointingToDeclaration/core/io.github.easynearby.core.exceptions/-easy-nearby-not-initialized-exception/cause.html
+$dokka.location:io.github.easynearby.core.exceptions/EasyNearbyNotInitializedException/message/#/PointingToDeclaration/core/io.github.easynearby.core.exceptions/-easy-nearby-not-initialized-exception/message.html
+$dokka.location:io.github.easynearby.core.exceptions/PermissionsNotGrantedException///PointingToDeclaration/core/io.github.easynearby.core.exceptions/-permissions-not-granted-exception/index.html
+$dokka.location:io.github.easynearby.core.exceptions/PermissionsNotGrantedException/PermissionsNotGrantedException/#kotlin.collections.List[kotlin.String]/PointingToDeclaration/core/io.github.easynearby.core.exceptions/-permissions-not-granted-exception/-permissions-not-granted-exception.html
+$dokka.location:io.github.easynearby.core.exceptions/PermissionsNotGrantedException/notGrantedPermissions/#/PointingToDeclaration/core/io.github.easynearby.core.exceptions/-permissions-not-granted-exception/not-granted-permissions.html
+$dokka.location:io.github.easynearby.core.loggging////PointingToDeclaration/core/io.github.easynearby.core.loggging/index.html
+$dokka.location:io.github.easynearby.core.loggging/Logger///PointingToDeclaration/core/io.github.easynearby.core.loggging/-logger/index.html
+$dokka.location:io.github.easynearby.core.loggging/Logger/logD/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/core/io.github.easynearby.core.loggging/-logger/log-d.html
+$dokka.location:io.github.easynearby.core.loggging/Logger/logE/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/core/io.github.easynearby.core.loggging/-logger/log-e.html
+$dokka.location:io.github.easynearby.core.loggging/Logger/logI/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/core/io.github.easynearby.core.loggging/-logger/log-i.html
+$dokka.location:io.github.easynearby.core.loggging/Logger/logW/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/core/io.github.easynearby.core.loggging/-logger/log-w.html
+$dokka.location:io.github.easynearby.core////PointingToDeclaration/core/io.github.easynearby.core/index.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy.CLUSTER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}core/io.github.easynearby.core/-connection-strategy/-c-l-u-s-t-e-r/index.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy.POINT_TO_POINT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}core/io.github.easynearby.core/-connection-strategy/-p-o-i-n-t_-t-o_-p-o-i-n-t/index.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy.STAR///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}core/io.github.easynearby.core/-connection-strategy/-s-t-a-r/index.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy///PointingToDeclaration/core/io.github.easynearby.core/-connection-strategy/index.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy/entries/#/PointingToDeclaration/core/io.github.easynearby.core/-connection-strategy/entries.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy/valueOf/#kotlin.String/PointingToDeclaration/core/io.github.easynearby.core/-connection-strategy/value-of.html
+$dokka.location:io.github.easynearby.core/ConnectionStrategy/values/#/PointingToDeclaration/core/io.github.easynearby.core/-connection-strategy/values.html
+$dokka.location:io.github.easynearby.core/EasyNearby///PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby/index.html
+$dokka.location:io.github.easynearby.core/EasyNearby/getAdvertiseManager/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby/get-advertise-manager.html
+$dokka.location:io.github.easynearby.core/EasyNearby/getDiscoverManager/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby/get-discover-manager.html
+$dokka.location:io.github.easynearby.core/EasyNearby/initialize/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby/initialize.html
+$dokka.location:io.github.easynearby.core/EasyNearbyInitializerFactory///PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby-initializer-factory/index.html
+$dokka.location:io.github.easynearby.core/EasyNearbyInitializerFactory/createAdvertiseManager/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby-initializer-factory/create-advertise-manager.html
+$dokka.location:io.github.easynearby.core/EasyNearbyInitializerFactory/createConnector/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby-initializer-factory/create-connector.html
+$dokka.location:io.github.easynearby.core/EasyNearbyInitializerFactory/createDiscover/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby-initializer-factory/create-discover.html
+$dokka.location:io.github.easynearby.core/EasyNearbyInitializerFactory/createLogger/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby-initializer-factory/create-logger.html
+$dokka.location:io.github.easynearby.core/EasyNearbyInitializerFactory/createPermissionsChecker/#/PointingToDeclaration/core/io.github.easynearby.core/-easy-nearby-initializer-factory/create-permissions-checker.html
+$dokka.location:io.github.easynearby.core/FactoryLoader///PointingToDeclaration/core/io.github.easynearby.core/-factory-loader/index.html
+$dokka.location:io.github.easynearby.core/FactoryLoader/loadFactory/#/PointingToDeclaration/core/io.github.easynearby.core/-factory-loader/load-factory.html
+$dokka.location:io.github.easynearby.core/PermissionsChecker///PointingToDeclaration/core/io.github.easynearby.core/-permissions-checker/index.html
+$dokka.location:io.github.easynearby.core/PermissionsChecker/getMissingPermissions/#/PointingToDeclaration/core/io.github.easynearby.core/-permissions-checker/get-missing-permissions.html
+$dokka.location:io.github.easynearby.core/PermissionsChecker/hasAllPermissions/#/PointingToDeclaration/core/io.github.easynearby.core/-permissions-checker/has-all-permissions.html
+io.github.easynearby.core
+io.github.easynearby.core.advertising
+io.github.easynearby.core.connection
+io.github.easynearby.core.di
+io.github.easynearby.core.discovery
+io.github.easynearby.core.exceptions
+io.github.easynearby.core.loggging
+
