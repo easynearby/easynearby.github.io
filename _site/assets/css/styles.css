@@ -1,0 +1,35 @@
+@import url(github.css);
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body { font-family: Roobert,sans-serif; font-size: 1.125rem; font-weight: 300; line-height: 1.4; }
+
+h1, h2, h3 { font-weight: 700; }
+
+.site-container { display: flex; flex-direction: column; }
+
+.content-container { flex: 1; max-width: 75rem; width: 90%; min-height: 100vh; margin-bottom: -10rem; margin: 0 auto; padding-left: 4rem; padding-right: 4rem; }
+
+.content-container:after { content: ""; display: block; height: 100px; }
+
+@media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
+@media (max-width: 480px) { .container { padding-left: 0.5rem; } }
+@font-face { font-family: 'Roobert'; src: url("../../assets/fonts/Roobert-Light.woff2") format("woff2"), url("../../assets/fonts/Roobert-Light.woff") format("woff"); font-weight: 300; font-style: normal; }
+@font-face { font-family: Roobert; src: url("../../assets/fonts/Roobert-Bold.woff") format("woff"), url("../../assets/fonts/Roobert-Bold.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+@font-face { font-family: Roobert; src: url("../../assets/fonts/Roobert-Heavy.woff") format("woff"), url("../../assets/fonts/Roobert-Heavy.woff2") format("woff2"); font-weight: 800; font-style: normal; }
+header { display: flex; justify-content: space-between; align-items: center; background-color: #0D1116; padding-left: 0.75rem; padding-right: 0.5rem; border: 2px solid black; background-clip: padding-box; box-shadow: inset 0 0 0 2px black; border-radius: 15px; margin-top: 0.5rem; margin-left: 0.5rem; margin-right: 0.5rem; margin-bottom: 5rem; }
+header .logo a { display: inline-block; }
+header .logo img { display: block; width: 5rem; height: auto; }
+
+nav { display: flex; }
+nav a { font-weight: 300; font-size: 1.125rem; line-height: 1.4; color: #FFFFFF; text-decoration: none; padding: 1rem 1.2rem; }
+nav a:hover { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 15px; }
+nav a.current { color: #FF8800; }
+nav img { max-height: 1.25rem; width: auto; vertical-align: middle; }
+
+@media (max-width: 768px) { header .logo img { width: 15rem; } }
+@media (max-width: 480px) { header { flex-direction: column; align-items: flex-start; padding: 0.5rem; }
+  header .logo img { width: 12rem; }
+  nav { margin-top: 0.5rem; gap: 0.5rem; } }
+footer { width: 100%; color: #a7a5a5; font-size: 1rem; padding: 1rem; text-align: center; }

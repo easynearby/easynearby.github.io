@@ -1,0 +1,10 @@
+title: EasyNearby
+description: Documentation for EasyNearby - a wrapper around Google's Nearby Connections API.
+
+baseurl: ""
+url: "https://easynearby.github.io"
+author: Giorgi Gusakov
+
+plugins: 
+  - jekyll-sitemap
+  - jekyll-seo-tag

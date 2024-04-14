@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/easyNearbyLogo.webp" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | EasyNearby</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Giorgi Gusakov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for EasyNearby - a wrapper around Google’s Nearby Connections API." />
+<meta property="og:description" content="Documentation for EasyNearby - a wrapper around Google’s Nearby Connections API." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="EasyNearby" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Giorgi Gusakov"},"description":"Documentation for EasyNearby - a wrapper around Google’s Nearby Connections API.","headline":"Home","name":"EasyNearby","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header>
+  <div class="logo">
+    <a href="/"><img src="/assets/images/easynearbyWithoutBackground.webp" alt="EaseNearby Logo"></a>
+</div>
+
+
+  <nav>
+      
+        
+          <a href="/dokka/html/index.html" target="_blank" >API</a>
+              
+      
+        
+          <a href="https://github.com/easynearby/EasyNearby" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/github-mark-white.svg" alt="Github Logo">
+          </a>
+              
+      
+  </nav>
+
+  
+
+</header>
+
+      <div class="content-container"><p><img src="./assets/images/easyNearbyLogo.webp" alt="image" width="300" height="300" /></p>
+
+<h2 id="what-is-easynearby">What is EasyNearby?</h2>
+<p>EasyNearby is a wrapper around Google’s <a href="https://developers.google.com/nearby/connections/overview">Nearby Connections API</a> (previously known as Nearby Messages API).</p>
+
+<h2 id="demo-youtube">Demo (Youtube)</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hAqrdB-kCzE?si=QoP-uOJ2wbY7aQJ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<h2 id="quick-start">Quick Start</h2>
+<p><a href="#setup">Setup</a><br />
+<a href="#permissions">Permissions</a><br />
+<a href="#start-advertising">Start advertising</a><br />
+<a href="#start-discovering">Start discovery</a><br />
+<a href="#connect">Connect</a><br />
+<a href="#send-payload">Send payload</a><br />
+<a href="#get-payload">Get payload</a><br />
+<a href="#close-connection">Close connection</a><br />
+<a href="#stop-advertising">Stop advertising</a><br />
+<a href="#stop-discoverring">Stop discovering</a><br /></p>
+
+<h3 id="setup">Setup</h3>
+<p>include dependency into your project</p>
+
+<figure class="highlight"><pre><code class="language-gradle" data-lang="gradle"><span class="n">implementation</span><span class="o">(</span><span class="s2">"io.github.easynearby:android:0.0.2"</span><span class="o">)</span></code></pre></figure>
+
+<h3 id="permissions">Permissions</h3>
+<p>The following permissions required depending on the Android API version:</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="cm">/**
+ * These permissions are required before connecting to Nearby Connections.
+ */</span>
+<span class="k">private</span> <span class="kd">var</span> <span class="py">REQUIRED_PERMISSIONS</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span> <span class="p">=</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">Build</span><span class="p">.</span><span class="nc">VERSION</span><span class="p">.</span><span class="nc">SDK_INT</span> <span class="p">&gt;=</span> <span class="nc">Build</span><span class="p">.</span><span class="nc">VERSION_CODES</span><span class="p">.</span><span class="nc">TIRAMISU</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">arrayOf</span><span class="p">(</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_SCAN</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_ADVERTISE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_CONNECT</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">CHANGE_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">NEARBY_WIFI_DEVICES</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nc">Build</span><span class="p">.</span><span class="nc">VERSION</span><span class="p">.</span><span class="nc">SDK_INT</span> <span class="p">&gt;=</span> <span class="nc">Build</span><span class="p">.</span><span class="nc">VERSION_CODES</span><span class="p">.</span><span class="nc">S</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">arrayOf</span><span class="p">(</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_SCAN</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_ADVERTISE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_CONNECT</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">CHANGE_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_COARSE_LOCATION</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_FINE_LOCATION</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nc">Build</span><span class="p">.</span><span class="nc">VERSION</span><span class="p">.</span><span class="nc">SDK_INT</span> <span class="p">&gt;=</span> <span class="nc">Build</span><span class="p">.</span><span class="nc">VERSION_CODES</span><span class="p">.</span><span class="nc">Q</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">arrayOf</span><span class="p">(</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_ADMIN</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">CHANGE_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_COARSE_LOCATION</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_FINE_LOCATION</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">arrayOf</span><span class="p">(</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">BLUETOOTH_ADMIN</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">CHANGE_WIFI_STATE</span><span class="p">,</span>
+            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="nc">ACCESS_COARSE_LOCATION</span><span class="p">,</span>
+        <span class="p">)</span></code></pre></figure>
+
+<h3 id="start-advertising">Start advertising</h3>
+<p>In order to advertise the device you have to acquire Advertiser via <code class="language-plaintext highlighter-rouge">EasyNearby.getAdvertiseManager()</code> and invoke <code class="language-plaintext highlighter-rouge">startAdvertising</code> method with a <code class="language-plaintext highlighter-rouge">DeviceInfo</code> object that represents your intention.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">EasyNearby</span><span class="p">.</span><span class="nf">getAdvertiseManager</span><span class="p">().</span><span class="nf">startAdvertising</span><span class="p">(</span><span class="nc">DeviceInfo</span><span class="p">(</span><span class="s">"myDeviceName"</span><span class="p">,</span> <span class="s">"serviceId"</span><span class="p">,</span> <span class="nc">ConnectionStrategy</span><span class="p">.</span><span class="nc">STAR</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>This will return a <code class="language-plaintext highlighter-rouge">Result</code> which in case of success gives you a flow of <code class="language-plaintext highlighter-rouge">ConnectionCandidateEvent</code>s. The event has inside <code class="language-plaintext highlighter-rouge">ConnectionCandidate</code> -  that represents a remote device and one of the two event types:</p>
+
+<p><code class="language-plaintext highlighter-rouge">DISCOVERED</code> - when a new ConnectionCandidate is found and there is a possibility to connect ot it<br />
+<code class="language-plaintext highlighter-rouge">LOST</code> - when previously found ConnectionCandidate is lost and there is no possibility to connect to it</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">start</span><span class="p">(</span><span class="n">deviceInfo</span><span class="p">:</span> <span class="nc">DeviceInfo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">viewModelScope</span><span class="p">.</span><span class="nf">launch</span> <span class="p">{</span>
+        <span class="nc">EasyNearby</span><span class="p">.</span><span class="nf">getAdvertiseManager</span><span class="p">().</span><span class="nf">startAdvertising</span><span class="p">(</span><span class="n">deviceInfo</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">onSuccess</span> <span class="p">{</span>
+                <span class="c1">// listen flow events</span>
+            <span class="p">}.</span><span class="nf">onFailure</span> <span class="p">{</span>
+                <span class="c1">// Handle failure</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="start-discovering">Start discovering</h3>
+<p>Discovering process are very similar to advertising. You just have to use <code class="language-plaintext highlighter-rouge">EasyNearby.getDiscoverManager()</code> and invoke <code class="language-plaintext highlighter-rouge">startDiscovery</code> method with a <code class="language-plaintext highlighter-rouge">DeviceInfo</code> object that represents your intention.</p>
+
+<p>This will return a <code class="language-plaintext highlighter-rouge">Result</code> which in case of success gives you a flow of <code class="language-plaintext highlighter-rouge">ConnectionCandidateEvent</code>s. The event has inside <code class="language-plaintext highlighter-rouge">ConnectionCandidate</code> -  that represents a remote device and one of the two event types:</p>
+
+<p><code class="language-plaintext highlighter-rouge">DISCOVERED</code> - when a new ConnectionCandidate is found and there is a possibility to connect ot it<br />
+<code class="language-plaintext highlighter-rouge">LOST</code> - when previously found ConnectionCandidate is lost and there is no possibility to connect to it</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">start</span><span class="p">(</span><span class="n">deviceInfo</span><span class="p">:</span> <span class="nc">DeviceInfo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">viewModelScope</span><span class="p">.</span><span class="nf">launch</span> <span class="p">{</span>
+        <span class="nc">EasyNearby</span><span class="p">.</span><span class="nf">getDiscoverManager</span><span class="p">().</span><span class="nf">startDiscovery</span><span class="p">(</span><span class="n">deviceInfo</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">onSuccess</span> <span class="p">{</span>
+                <span class="c1">// listen flow events</span>
+            <span class="p">}.</span><span class="nf">onFailure</span> <span class="p">{</span>
+                <span class="c1">// Handle failure</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="connect">Connect</h3>
+<p>In order to either initiate a connection or accept incomming connection you have to invoke <code class="language-plaintext highlighter-rouge">connect</code> method on the <code class="language-plaintext highlighter-rouge">ConnectionCandidate</code>. In this method you provide your device name and optionally you can pass <code class="language-plaintext highlighter-rouge">authValidator</code> callback in order to verify authentication digits with your partner.
+In case of Success you’ll get a <code class="language-plaintext highlighter-rouge">Connection</code> object that represent the established connection</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">connectionCandidate</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">myDeviceName</span> <span class="o">?:</span> <span class="s">"unknown"</span><span class="p">)</span> <span class="p">{</span> <span class="n">authenticationDigits</span><span class="p">:</span> <span class="nc">String</span> <span class="p">-&gt;</span>
+    <span class="kd">val</span> <span class="py">authResult</span><span class="p">:</span><span class="nc">Boolean</span> <span class="p">=</span> <span class="nf">showDitisToUserAndVerify</span><span class="p">(</span><span class="n">authenticationDigits</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">authResult</span>
+ <span class="p">}.</span><span class="nf">onSuccess</span> <span class="p">{</span>
+    <span class="c1">// handle success, for example keep connection</span>
+     <span class="nf">saveConnection</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
+ <span class="p">}.</span><span class="nf">onFailure</span> <span class="p">{</span>
+     <span class="c1">// handle failure</span>
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="send-payload">Send payload</h3>
+<p>In order to send payload you can use <code class="language-plaintext highlighter-rouge">sendPayload</code> function on a <code class="language-plaintext highlighter-rouge">Connection</code> that you’ve established</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">message</span> <span class="p">=</span> <span class="s">"Hello"</span>
+<span class="n">connection</span><span class="p">.</span><span class="nf">sendPayload</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="nf">toByteArray</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h3 id="get-payload">Get payload</h3>
+<p>In order to get payload you can use <code class="language-plaintext highlighter-rouge">getPayload</code> function on a <code class="language-plaintext highlighter-rouge">Connection</code> that returnes a Flow<ByteArray>. **This flow will be cancelled once the connection is closed**.</ByteArray></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">connection</span><span class="p">.</span><span class="nf">getPayload</span><span class="p">().</span><span class="nf">onCompletion</span> <span class="p">{</span>
+               <span class="c1">// Chandle connection close</span>
+           <span class="p">}.</span><span class="nf">collect</span> <span class="p">{</span> <span class="n">payload</span> <span class="p">-&gt;</span>
+                <span class="c1">// handle received payload            </span>
+           <span class="p">}</span>
+       <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="close-connection">Close connection</h3>
+<p>In order to close a connection you can use <code class="language-plaintext highlighter-rouge">close</code> function on a <code class="language-plaintext highlighter-rouge">Connection</code>.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">connection</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="stop-advertising">Stop advertising</h3>
+<p>In order to stop advertising you can invoke <code class="language-plaintext highlighter-rouge">startAdvertising</code> method on the <code class="language-plaintext highlighter-rouge">AdvertiseManager</code>.</p>
+
+<p><strong><em>Even after that devices can initiate connection if they have alredy discovered the device</em></strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">EasyNearby</span><span class="p">.</span><span class="nf">getAdvertiseManager</span><span class="p">().</span><span class="nf">stopAdvertising</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="stop-discoverring">Stop discoverring</h3>
+<p>In order to stop discovering you can invoke <code class="language-plaintext highlighter-rouge">stopDiscovery</code> method on the <code class="language-plaintext highlighter-rouge">DiscoveryManager</code>.</p>
+
+<p><strong><em>Even after that the device can initiate connection if they have alredy discovered devices</em></strong></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">EasyNearby</span><span class="p">.</span><span class="nf">getDiscoverManager</span><span class="p">().</span><span class="nf">stopDiscovery</span><span class="p">()</span>
+</code></pre></div></div>
+</div>
+      <footer>
+  <p>Copyright &copy; 2024 EasyNearby<br/>
+</p>
+</footer>
+
+    </div>
+  </body>
+</html>

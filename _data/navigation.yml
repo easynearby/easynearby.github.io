@@ -1,0 +1,5 @@
+- name: API
+  link: /dokka/html/index.html
+- name: Github
+  link: https://github.com/easynearby/EasyNearby
+  logo: /assets/images/github-mark-white.svg
